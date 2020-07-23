@@ -11,6 +11,9 @@ p {
 img {
   margin: 0 10px 10px;
 }
+.ms-Button {
+  transition: all 1s ease-in-out;
+}
 .homeNotice {
   display: inline-flex;
   flex-direction: column;
@@ -25,6 +28,7 @@ img {
   height: auto;
   width: 100%;
   max-width: 1500px;
+  transition: all 1s ease-in-out;
 }
 .resumeDisplay {
   display: flex;
@@ -34,6 +38,7 @@ img {
   margin: 10px 10px;
   height: auto;
   width: auto;
+  transition: all 1s ease-in-out;
 }
 #navbarButton {
   padding: 0 30px;

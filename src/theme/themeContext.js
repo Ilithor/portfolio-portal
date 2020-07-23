@@ -39,7 +39,8 @@ export const ThemeProvider = ({ children }) => {
             overflow: "auto",
             background:
               customizations.settings.theme?.semanticColors?.bodyBackground,
-            color: customizations.settings.theme?.semanticColors?.bodyText
+            color: customizations.settings.theme?.semanticColors?.bodyText,
+            transition: "all 1s ease-in-out"
           }}
         >
           {children}

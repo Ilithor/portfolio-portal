@@ -1,5 +1,6 @@
 import React from "react";
 import _ from "lodash";
+import { useHistory } from "react-router-dom";
 import {
   CommandBar,
   concatStyleSets,
@@ -79,20 +80,27 @@ const mergeStyles = inputStyles => {
  */
 export const Navbar = () => {
   const { isDarkMode, changeTheme } = useThemeData();
+  const history = useHistory();
   /** @type {import('office-ui-fabric-react').ICommandBarItemProps} */
   const _items = [
     {
       key: "darykkohler",
       text: "Daryk Kohler",
       styles: mergeStyles({ label: { fontSize: 28 } }),
-      href: "/"
+      onClick: e => {
+        e.preventDefault();
+        history.push("/");
+      }
     },
     {
       key: "resume",
       text: "Resume",
       iconProps: { iconName: "WordDocument" },
       styles: itemStyles,
-      href: "/resume",
+      onClick: e => {
+        e.preventDefault();
+        history.push("/resume");
+      },
       split: true,
       ariaLabel: "Resume",
       subMenuProps: {
@@ -113,7 +121,10 @@ export const Navbar = () => {
       text: "SocMon",
       iconProps: { iconName: "RedEye" },
       styles: itemStyles,
-      href: "/socmon",
+      onClick: e => {
+        e.preventDefault();
+        history.push("/socmon");
+      },
       ariaLabel: "SocMon"
     },
     {
@@ -130,7 +141,10 @@ export const Navbar = () => {
       text: "GitHub",
       iconProps: { iconName: "Database" },
       styles: itemStyles,
-      href: "/github",
+      onClick: e => {
+        e.preventDefault();
+        history.push("/github");
+      },
       ariaLabel: "GitHub"
     }
   ];

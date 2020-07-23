@@ -149,6 +149,7 @@ export const Navbar = () => {
         <CommandBar
           styles={{
             root: {
+              transition: "all 1s ease-in-out",
               borderTop: "1px solid rgba(200, 200, 200, 0.15)",
               borderBottom: "1px solid rgba(200,200,200,0.15)"
             }

@@ -111,7 +111,7 @@ export const Navbar = () => {
             text: "Download",
             iconProps: { iconName: "Download" },
             href:
-              "https://docs.google.com/document/d/1BznqXQj4gfePHGcsLsxOzmlkKX0cKMLh8ploQOkl0vw/export?format=doc"
+              "https://docs.google.com/document/d/1BrPVD5Ku1RpOYhv1dTGOVCoxZv2ZSHE-jvFYfdyQIgw/export?format=doc"
           }
         ]
       }

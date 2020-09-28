@@ -13,7 +13,7 @@ export const SocMon = () => {
     <div>
       <PrimaryButton
         className="primaryButton"
-        href="https://www.socmon.azurewebsites.net/"
+        href="http://socmon.azurewebsites.net/"
         target="_blank"
       >
         SocMon

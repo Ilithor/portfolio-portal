@@ -19,10 +19,6 @@ export const SocMon = () => {
         SocMon
       </PrimaryButton>
       <p>Built a social media site.</p>
-      <p>
-        Note: Has occasional hiccups due to limitations from the database
-        because of a lack of funds.
-      </p>
       <img
         className="socmonImg"
         src={process.env.PUBLIC_URL + "/socmonscreenshot.png"}

@@ -5,7 +5,7 @@ import { repoData } from "./RepoData";
 import { PrimaryButton } from "@fluentui/react";
 /** Renders the GitHub component
  *
- * @returns {React.FunctionComponent}
+ * @type {React.FunctionComponent}
  */
 export const GitHub = () => {
   /** Renders the repo list within the Card component
@@ -13,7 +13,7 @@ export const GitHub = () => {
    * @returns {Card[]}
    */
   const RenderList = () => {
-    return _.map(repoData, repo => (
+    return _.map(repoData, (repo) => (
       <Card
         key={`repo-${repo?.title}`}
         title={repo?.title}

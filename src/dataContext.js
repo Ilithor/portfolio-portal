@@ -4,8 +4,7 @@ import { ThemeProvider } from "./theme/themeContext";
 
 /** Renders the app wrapped in various providers
  *
- * @param {React.ReactChild} children
- * @returns {React.FunctionComponent}
+ * @type {React.FunctionComponent}
  */
 export const DataProvider = ({ children }) => (
   <ThemeProvider>

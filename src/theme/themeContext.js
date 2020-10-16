@@ -12,8 +12,7 @@ const themeContext = createContext();
  */
 /** Handles the dark and light theming for the app
  *
- * @type {IThemeProviderComponentProps}
- * @returns {React.FunctionComponent}
+ * @type {React.FunctionComponent}
  */
 export const ThemeProvider = ({ children }) => {
   const osDarkModePreferred =
@@ -40,7 +39,7 @@ export const ThemeProvider = ({ children }) => {
             background:
               customizations.settings.theme?.semanticColors?.bodyBackground,
             color: customizations.settings.theme?.semanticColors?.bodyText,
-            transition: "all 1s ease-in-out"
+            transition: "all 1s ease-in-out",
           }}
         >
           {children}

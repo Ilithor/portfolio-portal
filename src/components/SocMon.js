@@ -5,7 +5,7 @@ import "./style.css";
 
 /** Renders the SocMon component
  *
- * @returns {React.FunctionComponent}
+ * @type {React.FunctionComponent}
  */
 export const SocMon = () => {
   const { isDarkMode } = useThemeData();

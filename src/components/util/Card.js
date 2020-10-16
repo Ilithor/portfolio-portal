@@ -5,14 +5,13 @@ import { useThemeData } from "../../theme/themeContext";
 
 /** Renders the Card component
  *
- * @type {ICardComponentProps}
- * @returns {React.FunctionComponent}
+ * @type {React.FunctionComponent}
  */
 export const Card = ({ title, link, content, language }) => {
   const { isDarkMode } = useThemeData();
   const iconClass = mergeStyles({
     fontSize: 10,
-    marginRight: "4px"
+    marginRight: "4px",
   });
   return (
     <div
@@ -25,7 +24,7 @@ export const Card = ({ title, link, content, language }) => {
             className="Card-Link"
             href={link}
             style={{
-              color: isDarkMode ? "#e1ac2f" : "#471e6c"
+              color: isDarkMode ? "#e1ac2f" : "#471e6c",
             }}
           >
             <span>

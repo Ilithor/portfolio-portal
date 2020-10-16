@@ -7,24 +7,24 @@ import {
   memoizeFunction,
   CommandBarButton,
   ContextualMenuItem,
-  DirectionalHint
+  DirectionalHint,
 } from "office-ui-fabric-react";
 import "./style.css";
 import { useThemeData } from "../theme/themeContext";
 
 /** @type {import('office-ui-fabric-react').IContextualMenuStyles} */
 const itemStyles = {
-  label: { fontSize: 20 }
+  label: { fontSize: 20 },
 };
 /** @type {import('office-ui-fabric-react').IContextualMenuItemStyles} */
 const menuStyles = {
-  subComponentStyles: { menuItem: itemStyles, callout: {} }
+  subComponentStyles: { menuItem: itemStyles, callout: {} },
 };
 /** Destroys and rerenders the CommandBar button when styles change
  *
  * @returns {import('office-ui-fabric-react').IContextualMenuStyles}
  */
-const getCommandBarButtonStyles = memoizeFunction(originalStyles => {
+const getCommandBarButtonStyles = memoizeFunction((originalStyles) => {
   if (!originalStyles) {
     return itemStyles;
   }
@@ -35,7 +35,7 @@ const getCommandBarButtonStyles = memoizeFunction(originalStyles => {
  * @param {import('office-ui-fabric-react').ICommandBarItemProps} props
  * @returns {import('office-ui-fabric-react').CommandBarButton}
  */
-const CustomButton = props => {
+const CustomButton = (props) => {
   return (
     <CommandBarButton
       {...props}
@@ -49,7 +49,7 @@ const CustomButton = props => {
  * @param {import('office-ui-fabric-react').IContextualMenuItemProps} props
  * @returns {import('office-ui-fabric-react').ContextualMenuItem}
  */
-const CustomMenuItem = props => {
+const CustomMenuItem = (props) => {
   return <ContextualMenuItem {...props} />;
 };
 /** @type {import('office-ui-fabric-react').IOverflowSetProps} */
@@ -62,21 +62,21 @@ const overflowProps = {
     isBeakVisible: true,
     beakWidth: 20,
     gapSpace: 10,
-    directionalHint: DirectionalHint.bottomCenter
-  }
+    directionalHint: DirectionalHint.bottomCenter,
+  },
 };
 /** Merges to create a custom itemStyles
  *
  * @param {import('office-ui-fabric-react').IContextualMenuStyles} inputStyles
  * @returns {import('office-ui-fabric-react').IContextualMenuStyles}
  */
-const mergeStyles = inputStyles => {
+const mergeStyles = (inputStyles) => {
   const customStyles = _.merge({}, itemStyles, inputStyles);
   return customStyles;
 };
 /** Renders the navbar
  *
- * @returns {React.FunctionComponent}
+ * @type {React.FunctionComponent}
  */
 export const Navbar = () => {
   const { isDarkMode, changeTheme } = useThemeData();
@@ -87,17 +87,17 @@ export const Navbar = () => {
       key: "darykkohler",
       text: "Daryk Kohler",
       styles: mergeStyles({ label: { fontSize: 28 } }),
-      onClick: e => {
+      onClick: (e) => {
         e.preventDefault();
         history.push("/");
-      }
+      },
     },
     {
       key: "resume",
       text: "Resume",
       iconProps: { iconName: "WordDocument" },
       styles: itemStyles,
-      onClick: e => {
+      onClick: (e) => {
         e.preventDefault();
         history.push("/resume");
       },
@@ -111,21 +111,21 @@ export const Navbar = () => {
             text: "Download",
             iconProps: { iconName: "Download" },
             href:
-              "https://docs.google.com/document/d/1BrPVD5Ku1RpOYhv1dTGOVCoxZv2ZSHE-jvFYfdyQIgw/export?format=doc"
-          }
-        ]
-      }
+              "https://docs.google.com/document/d/1BrPVD5Ku1RpOYhv1dTGOVCoxZv2ZSHE-jvFYfdyQIgw/export?format=doc",
+          },
+        ],
+      },
     },
     {
       key: "socmon",
       text: "SocMon",
       iconProps: { iconName: "RedEye" },
       styles: itemStyles,
-      onClick: e => {
+      onClick: (e) => {
         e.preventDefault();
         history.push("/socmon");
       },
-      ariaLabel: "SocMon"
+      ariaLabel: "SocMon",
     },
     {
       key: "linkedin",
@@ -134,19 +134,19 @@ export const Navbar = () => {
       styles: itemStyles,
       href: "https://www.linkedin.com/in/daryk-kohler/",
       target: "_blank",
-      ariaLabel: "LinkedIn"
+      ariaLabel: "LinkedIn",
     },
     {
       key: "github",
       text: "GitHub",
       iconProps: { iconName: "Database" },
       styles: itemStyles,
-      onClick: e => {
+      onClick: (e) => {
         e.preventDefault();
         history.push("/github");
       },
-      ariaLabel: "GitHub"
-    }
+      ariaLabel: "GitHub",
+    },
   ];
   /** @type {import('office-ui-fabric-react').ICommandBarItemProps} */
   const _farItems = [
@@ -154,8 +154,8 @@ export const Navbar = () => {
       key: "darkTheme",
       onClick: () => changeTheme(),
       iconProps: { iconName: isDarkMode ? "ClearNight" : "Sunny" },
-      ariaLabel: "DarkTheme"
-    }
+      ariaLabel: "DarkTheme",
+    },
   ];
   return (
     <div>
@@ -165,8 +165,8 @@ export const Navbar = () => {
             root: {
               transition: "all 1s ease-in-out",
               borderTop: "1px solid rgba(200, 200, 200, 0.15)",
-              borderBottom: "1px solid rgba(200,200,200,0.15)"
-            }
+              borderBottom: "1px solid rgba(200,200,200,0.15)",
+            },
           }}
           overflowButtonProps={overflowProps}
           buttonAs={CustomButton}

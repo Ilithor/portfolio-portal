@@ -3,13 +3,13 @@ import {
   BrowserRouter as Router,
   Route,
   Switch,
-  Redirect
+  Redirect,
 } from "react-router-dom";
 import { Navbar, Resume, SocMon, GitHub } from "./components";
 
 /** Renders the portfolio portal
  *
- * @returns {React.FunctionComponent}
+ * @type {React.FunctionComponent}
  */
 export const App = () => (
   <Router>

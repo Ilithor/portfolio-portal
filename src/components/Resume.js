@@ -14,9 +14,15 @@ export const Resume = () => {
       <div>
         <PrimaryButton
           className="primaryButton"
-          href="https://docs.google.com/document/d/1BrPVD5Ku1RpOYhv1dTGOVCoxZv2ZSHE-jvFYfdyQIgw/export?format=doc"
+          href="https://docs.google.com/document/d/1iXV9QfSfKT3h2yW9fxushw6Ah57pYKjsmkYZZIaZfB0/export?format=doc"
         >
-          Download Document
+          Download Word
+        </PrimaryButton>
+        <PrimaryButton
+          className="primaryButton"
+          href="https://drive.google.com/uc?export=download&id=1_OS0C1mR9lyDFuhiN6MJkLjZoFr2Z2Bo"
+        >
+          Download PDF
         </PrimaryButton>
       </div>
       <div className="resumeDisplay" style={{ opacity: !isDarkMode ? 1 : 0.8 }}>

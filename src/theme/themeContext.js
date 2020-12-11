@@ -66,7 +66,3 @@ export const useThemeData = () => {
  * @property {()=>void} [changeTheme]
  * @property {boolean} [isDarkMode]
  */
-/**
- * @typedef IThemeProviderComponentProps
- * @property {React.ReactChild} children
- */

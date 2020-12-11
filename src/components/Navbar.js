@@ -95,7 +95,7 @@ export const Navbar = () => {
     {
       key: "resume",
       text: "Resume",
-      iconProps: { iconName: "WordDocument" },
+      iconProps: { iconName: "Work" },
       styles: itemStyles,
       onClick: (e) => {
         e.preventDefault();
@@ -107,11 +107,18 @@ export const Navbar = () => {
         styles: menuStyles,
         items: [
           {
-            key: "downloadResume",
-            text: "Download",
-            iconProps: { iconName: "Download" },
+            key: "downloadWord",
+            text: "Download Word",
+            iconProps: { iconName: "WordDocument" },
             href:
               "https://docs.google.com/document/d/1BrPVD5Ku1RpOYhv1dTGOVCoxZv2ZSHE-jvFYfdyQIgw/export?format=doc",
+          },
+          {
+            key: "downloadPDF",
+            text: "Download PDF",
+            iconProps: { iconName: "PDF" },
+            href:
+              "https://drive.google.com/uc?export=download&id=1_OS0C1mR9lyDFuhiN6MJkLjZoFr2Z2Bo",
           },
         ],
       },

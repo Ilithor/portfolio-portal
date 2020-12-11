@@ -35,7 +35,7 @@ img {
   flex-flow: wrap;
   align-items: flex-start;
   justify-content: center;
-  margin: 10px 10px;
+  margin: 10px 1px 0 0;
   height: auto;
   width: auto;
   transition: all 1s ease-in-out;
@@ -44,7 +44,7 @@ img {
   padding: 0 30px;
 }
 .primaryButton {
-  margin: 10px 0 0 0;
+  margin: 10px 10px 0 0;
 }
 .Card-List {
   display: flex;
